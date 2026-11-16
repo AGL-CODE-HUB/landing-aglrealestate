@@ -99,18 +99,34 @@ section.book{padding:72px 0 90px}
 .steps li{display:flex;gap:16px;align-items:center;background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:var(--sh);font-weight:700;color:var(--navy);font-size:16px}
 .steps li b{flex:none;width:40px;height:40px;border-radius:12px;background:var(--bg2);color:var(--blue);display:grid;place-items:center;font-weight:900;font-size:18px}
 .lic{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:14px;font-weight:700;color:var(--navy);background:var(--bg2);border-radius:14px;padding:14px 16px}
-.cal{background:var(--card);border-radius:26px;box-shadow:var(--sh);overflow:hidden;min-height:640px;display:flex;flex-direction:column}
-.calhead{display:flex;align-items:center;gap:12px;padding:20px 24px;border-bottom:1px solid var(--line);font-weight:800;color:var(--navy)}
-.calhead .dot{width:10px;height:10px;border-radius:50%;background:var(--cta1)}
-.calnew{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
-.calnew:hover{text-decoration:underline}
-@media (max-width:560px){.calhead{flex-wrap:wrap}.calnew{margin-left:22px}}
-.calbody{flex:1;display:flex}
-.calbody iframe{width:100%;min-height:640px;border:0}
-.calph{flex:1;display:grid;place-items:center;text-align:center;padding:40px 28px;background:repeating-linear-gradient(0deg,transparent 0 47px,var(--line) 47px 48px),repeating-linear-gradient(90deg,transparent 0 47px,var(--line) 47px 48px);background-color:var(--card)}
-.calph div{background:var(--card);border-radius:20px;padding:30px 28px;box-shadow:var(--sh);max-width:380px}
-.calph h3{margin:16px 0 0;font-size:20px;font-weight:800;color:var(--navy)}
-.calph p{margin:10px 0 22px;font-size:15px;line-height:1.55;color:var(--grey);font-weight:500}
+.formcard{background:var(--card);border-radius:26px;box-shadow:var(--sh);overflow:hidden}
+.formhead{display:flex;align-items:center;gap:12px;padding:20px 26px;border-bottom:1px solid var(--line);font-weight:800;color:var(--navy)}
+.formhead .dot{width:10px;height:10px;border-radius:50%;background:var(--cta1)}
+.lf{display:grid;grid-template-columns:1fr 1fr;gap:16px 16px;padding:26px}
+.fld{display:flex;flex-direction:column;gap:7px;min-width:0}
+.fld.full{grid-column:1/-1}
+.fld label,.fld legend{font-size:13px;font-weight:800;letter-spacing:.04em;color:var(--navy)}
+.fld label i,.fld legend i{font-style:normal;color:var(--blue)}
+.fld label small{font-weight:600;color:var(--grey);letter-spacing:0}
+.fld input,.fld select,.fld textarea{width:100%;font:500 16px/1.4 var(--f);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;transition:border-color .2s,box-shadow .2s}
+.fld textarea{min-height:96px;resize:vertical}
+.fld select{appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%230A6BF0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(10,107,240,.15)}
+.fld.err input,.fld.err select{border-color:#E5484D}
+fieldset.fld{border:0;margin:0;padding:0}
+.seg{display:flex;gap:10px}
+.seg label{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;font-size:15px;font-weight:700;color:var(--ink);letter-spacing:0;background:var(--bg);border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;cursor:pointer}
+.seg input{accent-color:var(--blue);width:18px;height:18px;margin:0}
+.seg label:has(input:checked){border-color:var(--blue);background:var(--bg2)}
+.fld.err .seg label{border-color:#E5484D}
+.chk{grid-column:1/-1;display:flex;gap:12px;align-items:flex-start;font-size:13px;line-height:1.5;color:var(--grey);font-weight:600}
+.chk input{accent-color:var(--blue);width:20px;height:20px;margin:0;flex:none}
+.chk a{color:var(--blue)}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.lf .btn{grid-column:1/-1;width:100%}
+.lf .btn[disabled]{opacity:.7;cursor:wait;transform:none}
+.ferr{grid-column:1/-1;margin:0;font-size:14px;font-weight:700;color:#E5484D;min-height:0}
+@media (max-width:560px){.lf{grid-template-columns:1fr;padding:20px}.formhead{padding:18px 20px}}
 footer{border-top:1px solid var(--line);padding:28px 0 36px;font-size:13px;color:var(--grey);font-weight:600}
 footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
 footer nav{display:flex;gap:18px}
@@ -181,17 +197,142 @@ footer a{text-decoration:none}footer a:hover{color:var(--navy);text-decoration:u
     <div>
       <p class="eyebrow">Ultimo passo</p>
       <h2>Prenota la tua <span>call gratuita</span></h2>
-      <p class="lead">Scegli il giorno e l’orario che preferisci. Un consulente AGL Real Estate ti chiamerà per rispondere alle tue domande e valutare insieme l’affiliazione della tua agenzia.</p>
+      <p class="lead">Lasciaci i tuoi dati e scegli subito il giorno e l’orario che preferisci. Un consulente AGL Real Estate ti chiamerà per rispondere alle tue domande e valutare insieme l’affiliazione della tua agenzia.</p>
       <ol class="steps">
-        <li><b>1</b>Scegli data e ora nel calendario</li>
-        <li><b>2</b>Ricevi la conferma via email</li>
-        <li><b>3</b>Valutiamo insieme la tua affiliazione</li>
+        <li><b>1</b>Lascia i tuoi dati</li>
+        <li><b>2</b>Scegli data e ora nel calendario</li>
+        <li><b>3</b>Ricevi la conferma via email</li>
       </ol>
       <div class="lic"><svg width="28" height="28" viewBox="-1 -1 26 26" aria-hidden="true"><path d="M12.00 2.40Q15.24 -0.10 16.80 3.69Q20.86 3.14 20.31 7.20Q24.10 8.76 21.60 12.00Q24.10 15.24 20.31 16.80Q20.86 20.86 16.80 20.31Q15.24 24.10 12.00 21.60Q8.76 24.10 7.20 20.31Q3.14 20.86 3.69 16.80Q-0.10 15.24 2.40 12.00Q-0.10 8.76 3.69 7.20Q3.14 3.14 7.20 3.69Q8.76 -0.10 12.00 2.40Z" fill="#0A6BF0"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Riservato ad agenti immobiliari con patentino</div>
     </div>
-    <div class="cal">
-      <div class="calhead"><span class="dot"></span>Calendario appuntamenti AGL Real Estate<a class="calnew" href="https://calendly.com/massimo-imparato/agl-real-estate" target="_blank" rel="noopener">Apri in una nuova scheda<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
-      <div class="calbody" id="calbody"></div>
+    <div class="formcard">
+      <div class="formhead"><span class="dot"></span>I tuoi dati</div>
+      <form class="lf" id="leadform" novalidate>
+        <div class="fld"><label for="f-nome">Nome <i>*</i></label><input id="f-nome" name="nome" autocomplete="given-name" required></div>
+        <div class="fld"><label for="f-cognome">Cognome <i>*</i></label><input id="f-cognome" name="cognome" autocomplete="family-name" required></div>
+        <div class="fld"><label for="f-email">Email <i>*</i></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="fld"><label for="f-tel">Numero di telefono <i>*</i></label><input id="f-tel" name="telefono" type="tel" autocomplete="tel" inputmode="tel" placeholder="+39 ..." required></div>
+        <fieldset class="fld" id="g-pat"><legend>Hai il patentino da agente immobiliare? <i>*</i></legend>
+          <div class="seg"><label><input type="radio" name="patentino" value="SI" required>Sì</label><label><input type="radio" name="patentino" value="NO">No</label></div>
+        </fieldset>
+        <div class="fld"><label for="f-prov">In quale provincia operi? <i>*</i></label>
+          <select id="f-prov" name="provincia" required>
+            <option value="" selected disabled>Seleziona la provincia</option>
+            <option>Agrigento</option>
+            <option>Alessandria</option>
+            <option>Ancona</option>
+            <option>Aosta</option>
+            <option>Arezzo</option>
+            <option>Ascoli Piceno</option>
+            <option>Asti</option>
+            <option>Avellino</option>
+            <option>Bari</option>
+            <option>Barletta-Andria-Trani</option>
+            <option>Belluno</option>
+            <option>Benevento</option>
+            <option>Bergamo</option>
+            <option>Biella</option>
+            <option>Bologna</option>
+            <option>Bolzano</option>
+            <option>Brescia</option>
+            <option>Brindisi</option>
+            <option>Cagliari</option>
+            <option>Caltanissetta</option>
+            <option>Campobasso</option>
+            <option>Caserta</option>
+            <option>Catania</option>
+            <option>Catanzaro</option>
+            <option>Chieti</option>
+            <option>Como</option>
+            <option>Cosenza</option>
+            <option>Cremona</option>
+            <option>Crotone</option>
+            <option>Cuneo</option>
+            <option>Enna</option>
+            <option>Fermo</option>
+            <option>Ferrara</option>
+            <option>Firenze</option>
+            <option>Foggia</option>
+            <option>Forlì-Cesena</option>
+            <option>Frosinone</option>
+            <option>Genova</option>
+            <option>Gorizia</option>
+            <option>Grosseto</option>
+            <option>Imperia</option>
+            <option>Isernia</option>
+            <option>L&#39;Aquila</option>
+            <option>La Spezia</option>
+            <option>Latina</option>
+            <option>Lecce</option>
+            <option>Lecco</option>
+            <option>Livorno</option>
+            <option>Lodi</option>
+            <option>Lucca</option>
+            <option>Macerata</option>
+            <option>Mantova</option>
+            <option>Massa-Carrara</option>
+            <option>Matera</option>
+            <option>Messina</option>
+            <option>Milano</option>
+            <option>Modena</option>
+            <option>Monza e Brianza</option>
+            <option>Napoli</option>
+            <option>Novara</option>
+            <option>Nuoro</option>
+            <option>Oristano</option>
+            <option>Padova</option>
+            <option>Palermo</option>
+            <option>Parma</option>
+            <option>Pavia</option>
+            <option>Perugia</option>
+            <option>Pesaro e Urbino</option>
+            <option>Pescara</option>
+            <option>Piacenza</option>
+            <option>Pisa</option>
+            <option>Pistoia</option>
+            <option>Pordenone</option>
+            <option>Potenza</option>
+            <option>Prato</option>
+            <option>Ragusa</option>
+            <option>Ravenna</option>
+            <option>Reggio Calabria</option>
+            <option>Reggio Emilia</option>
+            <option>Rieti</option>
+            <option>Rimini</option>
+            <option>Roma</option>
+            <option>Rovigo</option>
+            <option>Salerno</option>
+            <option>Sassari</option>
+            <option>Savona</option>
+            <option>Siena</option>
+            <option>Siracusa</option>
+            <option>Sondrio</option>
+            <option>Sud Sardegna</option>
+            <option>Taranto</option>
+            <option>Teramo</option>
+            <option>Terni</option>
+            <option>Torino</option>
+            <option>Trapani</option>
+            <option>Trento</option>
+            <option>Treviso</option>
+            <option>Trieste</option>
+            <option>Udine</option>
+            <option>Varese</option>
+            <option>Venezia</option>
+            <option>Verbano-Cusio-Ossola</option>
+            <option>Vercelli</option>
+            <option>Verona</option>
+            <option>Vibo Valentia</option>
+            <option>Vicenza</option>
+            <option>Viterbo</option>
+          </select>
+        </div>
+        <div class="fld full"><label for="f-note">Note per l’incontro <small>(facoltativo)</small></label><textarea id="f-note" name="note" maxlength="1500" placeholder="Raccontaci qualcosa della tua agenzia o cosa vorresti chiederci"></textarea></div>
+        <div class="hp" aria-hidden="true"><label>Lascia vuoto<input name="sito" tabindex="-1" autocomplete="off"></label></div>
+        <label class="chk"><input type="checkbox" name="privacy" id="f-privacy" required><span>Ho letto l’<a href="https://www.aglasteimmobiliari.it/privacy-policy/" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato da AGL Real Estate. <i style="font-style:normal;color:var(--blue)">*</i></span></label>
+        <p class="ferr" id="ferr" role="alert"></p>
+        <button class="btn" type="submit" id="fsend">Continua e scegli l’orario<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </form>
     </div>
   </div></section>
 </main>
@@ -202,23 +343,40 @@ footer a{text-decoration:none}footer a:hover{color:var(--navy);text-decoration:u
 </div></footer>
 
 <script>
-// Inserire qui il link Calendly di AGL Real Estate (es. https://calendly.com/aglrealestate/call)
-const CALENDLY_URL = "https://calendly.com/massimo-imparato/agl-real-estate";
-const cal = document.getElementById("calbody");
-const inPreview = /claude\.ai|claudeusercontent|anthropic/.test(location.hostname) || location.protocol === "file:" || window.self !== window.top;
-if (CALENDLY_URL && !inPreview) {
-  const f = document.createElement("iframe");
-  f.title = "Prenota la tua call";
-  f.src = CALENDLY_URL + (CALENDLY_URL.includes("?") ? "&" : "?") + "hide_gdpr_banner=1&primary_color=0a6bf0";
-  cal.appendChild(f);
-} else {
-  cal.innerHTML = `<div class="calph"><div>
-    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3" stroke="#0A6BF0" stroke-width="1.8"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#0A6BF0" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 15.5l2.3 2.3 4.7-4.8" stroke="#0BBD48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    <h3>Scegli quando parlarne</h3>
-    <p>Il calendario si apre in una nuova scheda. Bastano pochi secondi per fissare la tua call con il team AGL Real Estate.</p>
-    <a class="btn" href="${CALENDLY_URL}" target="_blank" rel="noopener" style="font-size:14px;padding:16px 24px">Scegli giorno e orario</a>
-  </div></div>`;
-}
+// URL della Web App di Google Apps Script (Distribuisci > Gestisci distribuzioni > URL)
+const LEAD_ENDPOINT = "https://script.google.com/macros/s/AKfycbxtbYW_hzmPIh0kEnoSE9aWcqtiArn9enB2vg-5mdIKwRd_cETEPQinrqdr6uZmeYeY/exec";
+const form = document.getElementById("leadform"), ferr = document.getElementById("ferr"), fsend = document.getElementById("fsend");
+form.addEventListener("input", e => { const f = e.target.closest(".fld"); f && f.classList.remove("err"); });
+const req = ["nome","cognome","email","telefono","patentino","provincia"];
+form.addEventListener("submit", async e => {
+  e.preventDefault();
+  ferr.textContent = "";
+  form.querySelectorAll(".err").forEach(x => x.classList.remove("err"));
+  const d = Object.fromEntries(new FormData(form));
+  let bad = req.filter(k => !String(d[k] || "").trim());
+  if (d.email && !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(d.email.trim())) bad.push("email");
+  if (d.telefono && String(d.telefono).replace(/\D/g,"").length < 8) bad.push("telefono");
+  bad.forEach(k => { const el = form.elements[k]; const box = (el.length ? el[0] : el).closest(".fld"); box && box.classList.add("err"); });
+  if (bad.length) { ferr.textContent = "Controlla i campi evidenziati in rosso."; return; }
+  if (!form.elements.privacy.checked) { ferr.textContent = "Per continuare devi accettare l’informativa privacy."; return; }
+  if (d.sito) return; // campo trappola per i bot
+  const lead = {
+    action: "lead",
+    id: (crypto.randomUUID ? crypto.randomUUID() : Date.now().toString(36) + Math.random().toString(36).slice(2)),
+    nome: d.nome.trim(), cognome: d.cognome.trim(), email: d.email.trim().toLowerCase(),
+    telefono: d.telefono.trim(), patentino: d.patentino, provincia: d.provincia, note: (d.note || "").trim()
+  };
+  fsend.disabled = true; fsend.firstChild.textContent = "Invio in corso…";
+  try {
+    await fetch(LEAD_ENDPOINT, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain;charset=utf-8" }, body: JSON.stringify(lead) });
+  } catch (_) {
+    fsend.disabled = false; fsend.firstChild.textContent = "Continua e scegli l’orario";
+    ferr.textContent = "Invio non riuscito. Controlla la connessione e riprova.";
+    return;
+  }
+  try { sessionStorage.setItem("aglLead", JSON.stringify({ id: lead.id, nome: lead.nome, cognome: lead.cognome, email: lead.email, telefono: lead.telefono })); } catch (_) {}
+  location.href = "/grazie";
+});
 // Video: copertina con pulsante play
 const v = document.getElementById("video"), c = document.getElementById("cover");
 c.addEventListener("click", () => { c.remove(); document.getElementById("vid").classList.add("started"); v.play().catch(()=>{}); });
