@@ -41,12 +41,15 @@ a{color:inherit}
 h1{margin:22px 0 0;font-weight:900;font-size:clamp(34px,6vw,68px);line-height:1;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
 h1 span{color:var(--lb)}
 .sub{font-size:clamp(16px,2vw,19px);line-height:1.6;color:#D6E4F7;margin:22px auto 0;max-width:680px;font-weight:500}
-.vtitle{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 12px;margin:40px auto 0;font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-align:center}
+.vtitle{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 12px;margin:28px auto 0;font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-align:center}
 .vtitle span{font-size:11px;letter-spacing:.1em;padding:6px 12px;border-radius:999px;background:rgba(51,209,107,.15);border:1.5px solid rgba(51,209,107,.6);color:#9FF0BC}
 .vid{position:relative;margin:18px auto 0;max-width:960px;border-radius:24px;overflow:hidden;background:#000;box-shadow:0 40px 90px -30px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12);aspect-ratio:16/9}
 .vid video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
 .vid .cover{position:absolute;inset:0;border:0;padding:0;cursor:pointer;background:center/cover no-repeat;display:grid;place-items:center}
-.vid .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,68,.05),rgba(7,28,68,.45))}
+.vid .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,68,0) 55%,rgba(7,28,68,.35))}
+.vid .cover{place-items:end start}
+.vid .cover .play{margin:0 0 20px 22px;width:80px;height:80px}
+.vid .cover .vlab{left:116px;bottom:38px}
 .play{position:relative;z-index:1;width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,var(--cta1),var(--cta2));display:grid;place-items:center;box-shadow:0 18px 40px -10px rgba(11,189,72,.7),0 0 0 12px rgba(255,255,255,.18);transition:transform .2s}
 .vid .cover:hover .play{transform:scale(1.06)}
 .vlab{position:absolute;z-index:1;left:22px;bottom:20px;font-size:14px;font-weight:700;color:#fff;background:rgba(7,28,68,.6);backdrop-filter:blur(6px);padding:8px 14px;border-radius:10px}
@@ -70,6 +73,11 @@ h1 span{color:var(--lb)}
 @media (max-width:560px){.ct{min-width:0;font-size:12px}.ctl{gap:8px;padding:32px 10px 10px}.cb{width:36px;height:36px}}
 .vfs{width:42px;height:42px;border-radius:12px;border:0;cursor:pointer;display:grid;place-items:center;background:rgba(7,28,68,.6);backdrop-filter:blur(6px)}
 .vfs:hover{background:rgba(7,28,68,.85)}
+.vid.pfs{position:fixed;inset:0;z-index:9999;max-width:none;width:100vw;height:100dvh;margin:0;border-radius:0;aspect-ratio:auto;box-shadow:none;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.vid.pfs video{object-fit:contain}
+.vid.pfs .vbar{top:calc(env(safe-area-inset-top) + 14px);right:calc(env(safe-area-inset-right) + 14px)}
+.vid.pfs .ctl{padding-bottom:calc(env(safe-area-inset-bottom) + 12px)}
+html.pfs-on,html.pfs-on body{overflow:hidden}
 .vid:fullscreen{max-width:none;width:100vw;height:100vh;border-radius:0;aspect-ratio:auto;margin:0}
 .vid:-webkit-full-screen{max-width:none;width:100vw;height:100vh;border-radius:0;margin:0}
 .vid:fullscreen video{object-fit:contain}
@@ -135,7 +143,8 @@ footer nav{display:flex;gap:18px}
 footer a{text-decoration:none}footer a:hover{color:var(--navy);text-decoration:underline}
 :focus-visible{outline:3px solid var(--lb);outline-offset:3px}
 @media (max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.bookbox{grid-template-columns:1fr}}
-@media (max-width:560px){.top .mini{display:none}.top svg{height:38px}.play{width:78px;height:78px}.vid{border-radius:16px}.btn{width:100%}.grid4{gap:12px}.stat{padding:20px 18px}}
+@media (max-width:560px){.top .mini{display:none}.top svg{height:38px}.vid .cover .play{width:52px;height:52px;margin:0 0 12px 12px;box-shadow:0 10px 24px -8px rgba(11,189,72,.7),0 0 0 7px rgba(255,255,255,.18)}.vid .cover .play svg{width:24px;height:24px}.vid .cover .vlab{display:none}.vid{border-radius:16px}.btn{width:100%}.grid4{gap:12px}.stat{padding:20px 18px}}
+@media (max-width:560px){.top{padding:16px 0}.head{margin-top:6px}h1{margin-top:10px;font-size:32px}.sub{font-size:15px;line-height:1.5;margin-top:14px}.vtitle{margin-top:20px;font-size:12px;gap:8px}.vtitle span{font-size:10px;padding:5px 10px}.vid{margin-top:12px}.vcta{font-size:11px;padding:9px 12px}.vbar{top:10px;right:10px}}
 @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.btn,.play{transition:none}}
 </style>
 </head>
@@ -151,10 +160,10 @@ footer a{text-decoration:none}footer a:hover{color:var(--navy);text-decoration:u
       <h1>Entra nella rete<br><span>Cresci con la forza di AGL</span></h1>
       <p class="sub">Scopri come la Formula Retail in Co-Brand porta nella tua agenzia nuovi incarichi di vendita, acquirenti già registrati e pubblicità gratuita sui principali portali. Affianchi il tuo marchio a quello di AGL, senza fee mensili e con un guadagno su ogni compravendita.</p>
     </div>
-    <p class="vtitle"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#0BBD48"/><path d="M10 8v8l6.5-4z" fill="#fff"/></svg>Guarda il video per capire il progetto<span>Visione obbligatoria prima della call</span></p>
+    <p class="vtitle">Guarda il video per capire il progetto<span>Visione obbligatoria prima della call</span></p>
     <div class="vid" id="vid">
-      <video id="video" disablepictureinpicture playsinline preload="metadata" poster="copertina-video.jpg" src="https://player.vimeo.com/progressive_redirect/playback/1246248325/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&amp;log_user=0&amp;signature=e84f52c5ef7a5999f7e146bc58b6e3554ebf95e27516f2ae87d75d6904256f01"></video>
-      <button class="cover" id="cover" style="background-image:url('copertina-video.jpg')" aria-label="Riproduci il video di presentazione">
+      <video id="video" disablepictureinpicture playsinline preload="metadata" poster="copertina-logo.jpg" src="https://player.vimeo.com/progressive_redirect/playback/1246248325/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&amp;log_user=0&amp;signature=e84f52c5ef7a5999f7e146bc58b6e3554ebf95e27516f2ae87d75d6904256f01"></video>
+      <button class="cover" id="cover" style="background-image:url('copertina-logo.jpg')" aria-label="Riproduci il video di presentazione">
         <span class="play"><svg width="38" height="38" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg></span>
         <span class="vlab">Video di presentazione · 30 minuti</span>
       </button>
@@ -383,7 +392,9 @@ form.addEventListener("submit", async e => {
 const v = document.getElementById("video"), c = document.getElementById("cover");
 c.addEventListener("click", () => { c.remove(); document.getElementById("vid").classList.add("started"); v.play().catch(()=>{}); });
 const box = document.getElementById("vid");
-const isFs = () => document.fullscreenElement || document.webkitFullscreenElement;
+const isPfs = () => box.classList.contains("pfs");
+const isFs = () => document.fullscreenElement || document.webkitFullscreenElement || isPfs();
+const setPfs = on => { box.classList.toggle("pfs", on); document.documentElement.classList.toggle("pfs-on", on); fsChange(); };
 const cplay = document.getElementById("cplay"), iplay = document.getElementById("iplay"), ctime = document.getElementById("ctime"), cseek = document.getElementById("cseek"), cmute = document.getElementById("cmute"), iwave = document.getElementById("iwave"), ifs = document.getElementById("ifs");
 const fmt = s => { s = Math.max(0, Math.floor(s||0)); const m = Math.floor(s/60), r = s%60; return m + ":" + String(r).padStart(2,"0"); };
 const toggle = () => { if (c.isConnected) c.remove(); v.paused ? v.play().catch(()=>{}) : v.pause(); };
@@ -400,15 +411,19 @@ let idleT; const wake = () => { box.classList.remove("idle"); clearTimeout(idleT
 const fsChange = () => ifs.setAttribute("d", isFs() ? "M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" : "M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5");
 document.addEventListener("fullscreenchange", fsChange); document.addEventListener("webkitfullscreenchange", fsChange);
 document.getElementById("vfs").addEventListener("click", () => {
-  if (isFs()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
-  if (box.requestFullscreen) box.requestFullscreen();
-  else if (box.webkitRequestFullscreen) box.webkitRequestFullscreen();
-  else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+  if (isPfs()) { setPfs(false); return; }
+  if (document.fullscreenElement || document.webkitFullscreenElement) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+  // iPhone non permette lo schermo intero di un elemento: usiamo uno schermo intero "finto" che tiene visibile il tasto Prenota la call
+  if (box.requestFullscreen && document.fullscreenEnabled) box.requestFullscreen();
+  else if (box.webkitRequestFullscreen && document.webkitFullscreenEnabled) box.webkitRequestFullscreen();
+  else setPfs(true);
 });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && isPfs()) setPfs(false); });
 document.getElementById("vcta").addEventListener("click", e => {
   if (!isFs()) return;
   e.preventDefault();
-  (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+  if (isPfs()) setPfs(false); else (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+  v.pause();
   setTimeout(() => document.getElementById("prenota").scrollIntoView({behavior:"smooth"}), 250);
 });
 </script>
