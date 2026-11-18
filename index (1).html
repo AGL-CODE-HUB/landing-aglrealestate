@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AGL Real Estate – Guarda il video e prenota la tua call</title>
+<meta name="description" content="Guarda il video di presentazione della Formula Retail in Co-Brand di AGL Real Estate e prenota la tua call gratuita.">
+<meta property="og:title" content="AGL Real Estate – Guarda il video e prenota la tua call">
+<meta property="og:description" content="Incarichi di vendita, acquirenti già registrati e pubblicità gratuita sui portali. Scopri la Formula Retail in Co-Brand.">
+<meta property="og:image" content="copertina-video.jpg">
+<meta name="robots" content="noindex">
+<!-- Pixel di Meta: incollare qui il codice fornito da Gestione eventi -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --hero1:#071C44;--hero2:#0B2D63;--hero3:#1E4F96;--blue:#0A6BF0;--lb:#5AA2FF;--navy:#103F78;--ink:#15243C;--grey:#5E6B80;--line:#D6DEEB;
+  --bg:#F3F7FC;--bg2:#E8F1FB;--card:#FFFFFF;--cta1:#0BBD48;--cta2:#33D16B;--sh:0 22px 50px -18px rgba(16,40,80,.22);
+  --f:'Montserrat',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+  color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--navy:#CFE2FF;--ink:#E7EEF8;--grey:#A9B6CA;--line:#2A3E5E;--bg:#081733;--bg2:#0B1F45;--card:#0F2550;--sh:0 24px 60px -14px rgba(0,0,0,.5);color-scheme:dark}}
+:root[data-theme="dark"]{--navy:#CFE2FF;--ink:#E7EEF8;--grey:#A9B6CA;--line:#2A3E5E;--bg:#081733;--bg2:#0B1F45;--card:#0F2550;--sh:0 24px 60px -14px rgba(0,0,0,.5);color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;font-family:var(--f);color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+/* HERO */
+.hero{position:relative;overflow:hidden;color:#fff;background:linear-gradient(125deg,var(--hero1) 0%,var(--hero2) 45%,var(--hero3) 100%);padding-bottom:72px}
+.hero::before{content:"";position:absolute;width:900px;height:700px;right:-260px;top:-320px;background:radial-gradient(closest-side,rgba(110,170,255,.45),rgba(110,170,255,0));pointer-events:none}
+.hero .wm{position:absolute;right:-90px;bottom:-120px;width:560px;opacity:.05;pointer-events:none}
+.top{position:relative;display:flex;align-items:center;justify-content:space-between;padding:26px 0}
+.top svg{height:46px;width:auto}
+.top .mini{font-size:13px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:11px 18px;border-radius:12px;border:1.5px solid rgba(255,255,255,.35);transition:background .2s,border-color .2s}
+.top .mini:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.head{position:relative;text-align:center;max-width:900px;margin:28px auto 0}
+.pill{display:inline-flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:9px 18px;border-radius:999px;background:rgba(255,255,255,.08);border:1.5px solid rgba(90,162,255,.6)}
+.pill i{width:8px;height:8px;border-radius:50%;background:var(--cta2);box-shadow:0 0 0 4px rgba(51,209,107,.25)}
+h1{margin:22px 0 0;font-weight:900;font-size:clamp(34px,6vw,68px);line-height:1;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
+h1 span{color:var(--lb)}
+.sub{font-size:clamp(16px,2vw,19px);line-height:1.6;color:#D6E4F7;margin:22px auto 0;max-width:680px;font-weight:500}
+.vtitle{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 12px;margin:40px auto 0;font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-align:center}
+.vtitle span{font-size:11px;letter-spacing:.1em;padding:6px 12px;border-radius:999px;background:rgba(51,209,107,.15);border:1.5px solid rgba(51,209,107,.6);color:#9FF0BC}
+.vid{position:relative;margin:18px auto 0;max-width:960px;border-radius:24px;overflow:hidden;background:#000;box-shadow:0 40px 90px -30px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12);aspect-ratio:16/9}
+.vid video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
+.vid .cover{position:absolute;inset:0;border:0;padding:0;cursor:pointer;background:center/cover no-repeat;display:grid;place-items:center}
+.vid .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,68,.05),rgba(7,28,68,.45))}
+.play{position:relative;z-index:1;width:104px;height:104px;border-radius:50%;background:linear-gradient(135deg,var(--cta1),var(--cta2));display:grid;place-items:center;box-shadow:0 18px 40px -10px rgba(11,189,72,.7),0 0 0 12px rgba(255,255,255,.18);transition:transform .2s}
+.vid .cover:hover .play{transform:scale(1.06)}
+.vlab{position:absolute;z-index:1;left:22px;bottom:20px;font-size:14px;font-weight:700;color:#fff;background:rgba(7,28,68,.6);backdrop-filter:blur(6px);padding:8px 14px;border-radius:10px}
+.after{position:relative;display:flex;flex-direction:column;align-items:center;gap:14px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:inherit;font-weight:800;font-size:16px;letter-spacing:.05em;text-transform:uppercase;padding:20px 34px;border-radius:16px;border:0;cursor:pointer;color:#fff;text-decoration:none;background:linear-gradient(135deg,var(--cta1),var(--cta2));box-shadow:0 18px 34px -14px rgba(11,189,72,.65);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 22px 40px -14px rgba(11,189,72,.7)}
+.note{font-size:14px;color:#B9CCE8;font-weight:600;display:flex;align-items:center;gap:8px}
+.kick{display:inline-flex;align-items:center;gap:10px;margin:30px 0 0;font-size:15px;font-weight:900;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.vbar{position:absolute;top:16px;right:16px;z-index:3;display:flex;gap:10px;align-items:center}
+.vcta{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;color:#fff;text-decoration:none;padding:11px 16px;border-radius:12px;background:linear-gradient(135deg,var(--cta1),var(--cta2));box-shadow:0 10px 24px -8px rgba(11,189,72,.75)}
+.ctl{position:absolute;left:0;right:0;bottom:0;z-index:2;display:flex;align-items:center;gap:12px;padding:40px 18px 14px;background:linear-gradient(180deg,rgba(7,28,68,0),rgba(7,28,68,.85));transition:opacity .3s}
+.vid.idle .ctl{opacity:0;pointer-events:none}
+.vid:not(.started) .ctl{display:none}
+.vid.idle{cursor:none}
+.cb{flex:none;width:40px;height:40px;border:0;border-radius:10px;background:rgba(255,255,255,.08);display:grid;place-items:center;cursor:pointer}
+.cb:hover{background:rgba(255,255,255,.2)}
+.ct{flex:none;font-size:13px;font-weight:700;color:#fff;font-variant-numeric:tabular-nums;min-width:96px}
+.cseek{flex:1;min-width:0;height:6px;appearance:none;-webkit-appearance:none;border-radius:6px;background:linear-gradient(90deg,var(--cta2) var(--p,0%),rgba(255,255,255,.3) var(--p,0%));cursor:pointer}
+.cseek::-webkit-slider-thumb{-webkit-appearance:none;width:16px;height:16px;border-radius:50%;background:#fff;box-shadow:0 2px 6px rgba(0,0,0,.4)}
+.cseek::-moz-range-thumb{width:16px;height:16px;border:0;border-radius:50%;background:#fff}
+@media (max-width:560px){.ct{min-width:0;font-size:12px}.ctl{gap:8px;padding:32px 10px 10px}.cb{width:36px;height:36px}}
+.vfs{width:42px;height:42px;border-radius:12px;border:0;cursor:pointer;display:grid;place-items:center;background:rgba(7,28,68,.6);backdrop-filter:blur(6px)}
+.vfs:hover{background:rgba(7,28,68,.85)}
+.vid:fullscreen{max-width:none;width:100vw;height:100vh;border-radius:0;aspect-ratio:auto;margin:0}
+.vid:-webkit-full-screen{max-width:none;width:100vw;height:100vh;border-radius:0;margin:0}
+.vid:fullscreen video{object-fit:contain}
+.vid:-webkit-full-screen video{object-fit:contain}
+.vid:fullscreen .vbar{top:24px;right:24px}
+.vid:fullscreen .vcta{font-size:16px;padding:15px 22px}
+/* STATS */
+.stats{position:relative;margin-top:-40px;z-index:2}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:var(--card);border-radius:22px;box-shadow:var(--sh);padding:26px 24px}
+.stat small{display:block;font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--blue)}
+.stat b{display:block;font-size:clamp(34px,4vw,46px);font-weight:900;color:var(--navy);line-height:1.05;margin-top:4px}
+.stat span{display:block;font-size:15px;line-height:1.45;color:var(--grey);margin-top:6px;font-weight:600}
+/* WHY */
+section.why{padding:84px 0 20px}
+.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--blue)}
+h2{margin:10px 0 0;font-size:clamp(28px,4vw,44px);font-weight:900;color:var(--navy);line-height:1.05;letter-spacing:-.01em;text-wrap:balance}
+h2 span{color:var(--blue)}
+.lead{font-size:17px;line-height:1.65;color:var(--grey);margin:16px 0 0;max-width:640px;font-weight:500}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:36px}
+.feat{background:var(--card);border-radius:22px;padding:28px;box-shadow:var(--sh);border:1px solid transparent}
+.ic{width:60px;height:60px;border-radius:50%;background:var(--blue);display:grid;place-items:center;box-shadow:0 10px 22px -10px rgba(10,107,240,.6)}
+.feat h3{margin:20px 0 0;font-size:21px;font-weight:800;color:var(--navy);line-height:1.2}
+.feat p{margin:10px 0 0;font-size:15px;line-height:1.6;color:var(--grey);font-weight:500}
+/* BOOK */
+section.book{padding:72px 0 90px}
+.bookbox{display:grid;grid-template-columns:.85fr 1.15fr;gap:28px;align-items:start}
+.steps{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+.steps li{display:flex;gap:16px;align-items:center;background:var(--card);border-radius:18px;padding:16px 18px;box-shadow:var(--sh);font-weight:700;color:var(--navy);font-size:16px}
+.steps li b{flex:none;width:40px;height:40px;border-radius:12px;background:var(--bg2);color:var(--blue);display:grid;place-items:center;font-weight:900;font-size:18px}
+.lic{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:14px;font-weight:700;color:var(--navy);background:var(--bg2);border-radius:14px;padding:14px 16px}
+.cal{background:var(--card);border-radius:26px;box-shadow:var(--sh);overflow:hidden;min-height:640px;display:flex;flex-direction:column}
+.calhead{display:flex;align-items:center;gap:12px;padding:20px 24px;border-bottom:1px solid var(--line);font-weight:800;color:var(--navy)}
+.calhead .dot{width:10px;height:10px;border-radius:50%;background:var(--cta1)}
+.calnew{margin-left:auto;display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
+.calnew:hover{text-decoration:underline}
+@media (max-width:560px){.calhead{flex-wrap:wrap}.calnew{margin-left:22px}}
+.calbody{flex:1;display:flex}
+.calbody iframe{width:100%;min-height:640px;border:0}
+.calph{flex:1;display:grid;place-items:center;text-align:center;padding:40px 28px;background:repeating-linear-gradient(0deg,transparent 0 47px,var(--line) 47px 48px),repeating-linear-gradient(90deg,transparent 0 47px,var(--line) 47px 48px);background-color:var(--card)}
+.calph div{background:var(--card);border-radius:20px;padding:30px 28px;box-shadow:var(--sh);max-width:380px}
+.calph h3{margin:16px 0 0;font-size:20px;font-weight:800;color:var(--navy)}
+.calph p{margin:10px 0 22px;font-size:15px;line-height:1.55;color:var(--grey);font-weight:500}
+footer{border-top:1px solid var(--line);padding:28px 0 36px;font-size:13px;color:var(--grey);font-weight:600}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:center}
+footer nav{display:flex;gap:18px}
+footer a{text-decoration:none}footer a:hover{color:var(--navy);text-decoration:underline}
+:focus-visible{outline:3px solid var(--lb);outline-offset:3px}
+@media (max-width:900px){.grid4{grid-template-columns:repeat(2,1fr)}.grid3{grid-template-columns:1fr}.bookbox{grid-template-columns:1fr}}
+@media (max-width:560px){.top .mini{display:none}.top svg{height:38px}.play{width:78px;height:78px}.vid{border-radius:16px}.btn{width:100%}.grid4{gap:12px}.stat{padding:20px 18px}}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.btn,.play{transition:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <svg class="wm" viewBox="0 0 126.022 162.209" aria-hidden="true"><path d="M11.15 151.06H114.87V50.03L63.01 12.59 11.15 50.03Zm109.87 6.15H5V46.88L63.01 5l58.01 41.88Z" fill="#fff"/></svg>
+  <div class="wrap">
+    <div class="top">
+      <svg viewBox="0 0 1036 434" role="img" aria-label="AGL Real Estate"><path d="M1 433C0 433 0 362 0 276L0 120L4 117C6 116 42 90 84 59C125 29 161 4 163 2L166 0L248 60L331 119L331 277L331 434L166 434C76 434 1 434 1 433ZM512 412L512 389L515 389C517 389 518 389 518 391L518 393L522 391C529 387 541 389 545 395C549 400 549 409 546 414C540 422 531 424 523 420L519 418L519 426L519 434L516 434L512 434L512 412ZM374 420C364 415 362 401 370 393C377 387 390 387 395 393L398 396L396 397C393 398 393 398 390 396C383 390 372 396 372 405C372 415 383 420 391 414C393 412 394 412 396 414L398 416L395 419C389 422 380 423 374 420ZM410 420C396 412 398 393 414 389C430 386 442 400 435 413C431 421 418 425 410 420ZM444 406L444 389L447 389C449 389 450 389 450 391C450 393 450 393 452 392C458 387 467 388 472 392C474 394 474 394 477 392C484 386 497 388 500 395C502 397 502 401 502 410L502 422L499 422L496 422L496 412C496 398 494 394 487 394C479 394 476 398 476 413L476 422L473 422L470 422L470 412C470 398 468 394 461 394C453 394 451 397 450 411L450 422L447 422L444 422L444 406ZM555 406L555 389L558 389C561 389 562 389 562 391C562 393 562 393 564 392C565 391 567 390 568 390C569 389 571 389 572 388C574 388 574 388 574 391C574 394 574 394 571 395C564 396 562 399 562 412L562 422L558 422L555 422L555 406ZM580 420C575 417 574 412 577 408C580 404 583 403 591 403C599 403 599 403 599 400C599 395 589 392 582 396C579 397 577 396 577 393C577 389 594 387 600 390C605 393 606 397 606 410L606 422L603 422C601 422 600 422 600 420C600 418 600 418 597 420C592 423 584 423 580 420ZM639 420C632 417 629 412 629 405C629 385 659 382 663 402C663 404 663 406 663 406C663 407 656 407 649 407L635 407L636 409C638 416 647 419 654 415C658 413 658 413 659 415C664 420 648 424 639 420ZM688 406C684 398 681 390 681 390C681 389 682 389 684 389C687 389 688 390 693 402C696 408 699 414 699 414C699 414 702 408 705 402C710 390 711 389 714 389C716 389 717 389 717 389C717 390 714 397 710 406C702 421 702 422 699 422L696 422L688 406ZM727 420C720 416 716 409 718 402C722 384 750 385 752 403L752 407L738 407C723 407 722 407 726 412C729 417 737 418 743 415C747 413 747 413 748 415C753 420 735 424 727 420ZM759 406L759 389L762 389C764 389 765 389 765 391L765 393L769 391C773 388 781 388 785 390C791 393 792 396 793 410L793 422L790 422L786 422L786 410C786 399 786 399 783 396C781 394 780 394 776 394C767 395 766 397 766 411L766 422L762 422L759 422L759 406ZM808 420C798 415 796 399 806 392C812 388 823 388 827 392C829 393 829 393 829 384L830 376L832 376L836 376L836 399L836 422L833 422C830 422 830 422 830 419L830 417L827 419C822 422 814 423 808 420ZM846 406L846 389L849 389L852 389L852 406L852 422L849 422L846 422L846 406ZM878 421C878 420 878 410 878 397L878 376L882 375L885 375L885 384L885 393L889 391C898 385 911 390 914 400C919 415 902 427 889 420L885 418L885 420C885 422 879 423 878 421ZM928 420C914 413 916 393 932 389C943 387 952 393 953 403L954 407L940 407C932 407 925 407 925 408C925 410 928 414 931 415C936 418 940 417 944 415C948 413 948 413 950 415C951 417 951 417 950 418C944 423 935 423 928 420ZM961 421C960 421 960 414 960 405L960 389L964 389C966 389 967 389 967 391C967 393 967 393 969 392C972 389 978 388 983 389C992 391 994 395 994 411L994 422L991 422L988 422L987 410C986 395 985 393 977 394C969 395 968 397 967 411L967 422L964 422C963 422 961 422 961 421ZM1010 420C996 413 998 393 1014 389C1025 387 1034 393 1035 403L1036 407L1021 407L1007 407L1008 409C1010 416 1019 419 1026 415C1030 413 1030 413 1031 415C1033 417 1033 417 1031 418C1026 423 1017 423 1010 420ZM427 413C432 408 431 398 424 395C414 390 403 401 408 411C412 418 422 419 427 413ZM535 416C546 411 543 394 531 394C523 394 519 398 519 405C519 414 527 419 535 416ZM596 415C598 414 599 412 599 410C599 407 599 407 593 407C586 407 582 409 582 413C582 417 591 419 596 415ZM823 416C829 413 831 406 828 399C825 393 815 392 809 397C800 407 811 422 823 416ZM902 416C908 413 910 406 907 399C904 393 894 392 888 397C879 407 890 422 902 416ZM314 272L314 128L240 76C200 46 166 23 166 23C165 23 131 46 91 76L18 128L18 272L18 416L166 416L314 416L314 272ZM657 401C657 401 656 399 654 397C649 391 638 394 636 401C635 403 635 403 646 403C655 403 657 403 657 401ZM746 401C746 398 740 394 735 394C731 394 729 394 727 397C722 402 723 403 735 403C744 403 746 403 746 401ZM947 401C947 398 941 394 936 394C931 394 925 398 925 402C925 403 930 403 936 403C945 403 947 403 947 401ZM1029 401C1029 401 1028 399 1026 397C1021 391 1010 394 1008 401C1007 403 1007 403 1018 403C1027 403 1029 403 1029 401ZM845 381C844 377 845 376 849 376C852 376 852 376 852 378C852 381 852 382 849 382C847 382 846 382 845 381ZM108 379C109 378 114 365 121 350L132 323L140 323C145 323 148 323 148 324C149 325 154 338 160 353C167 368 172 380 172 381C172 381 169 381 164 381L156 381L154 376L152 370L140 370L127 370L125 376L123 381L115 381C109 381 108 381 108 379ZM192 378C180 373 175 364 175 352C175 329 201 315 223 327C230 330 230 331 226 336L222 341L218 338C205 330 190 337 190 351C190 363 199 371 210 369C217 367 217 367 217 358L217 351L223 351L229 351L229 362C229 376 229 376 218 379C208 382 199 382 192 378ZM242 352L242 323L249 323L256 323L256 346L256 368L268 368L281 368L281 374L281 381L262 381L242 381L242 352ZM145 352C144 349 142 344 142 342C140 337 140 338 135 349L131 359L140 359L148 359L145 352ZM438 343C434 342 428 340 426 338C425 337 432 325 433 326C448 332 461 333 463 328C465 323 463 322 446 318C433 314 428 310 427 301C426 284 448 274 471 281C479 284 480 284 477 290C474 297 474 297 467 295C457 292 447 293 445 297C444 301 448 302 459 305C474 309 481 314 482 322C483 332 476 340 466 343C459 345 445 345 438 343ZM370 312L370 280L396 280L421 280L421 287L421 294L405 294L389 294L389 300L389 305L404 305L418 305L418 312L418 318L404 318L389 318L389 324L389 330L406 330L423 330L423 337L423 344L396 344L370 344L370 312ZM501 319L501 294L491 294L481 294L481 287L481 280L510 280L539 280L539 287L539 294L529 294L519 294L519 319L519 344L510 344L501 344L501 319ZM546 312L561 280L570 280L580 280L592 308C599 324 605 338 606 340L608 344L598 344L589 344L586 338L584 332L570 332L556 332L554 338L551 344L542 344L532 344L546 312ZM621 319L621 294L611 294L601 294L601 287L601 280L630 280L660 280L660 287L660 294L650 294L640 294L640 319L640 344L630 344L621 344L621 319ZM664 312L664 280L690 280L715 280L715 287L715 294L698 294L682 294L682 300L682 305L696 305L711 305L711 312L711 318L696 318L682 318L682 324L682 330L699 330L716 330L716 337L716 344L690 344L664 344L664 312ZM578 317C574 307 570 299 570 299C570 299 568 303 566 307C564 312 563 316 562 317C562 318 564 318 570 318C576 318 578 318 578 317ZM370 223L370 191L391 191L412 192L417 194C432 203 433 225 418 234C417 235 417 235 423 244C426 249 429 253 429 254C430 255 428 255 420 255L410 255L405 246L399 238L394 238L389 238L389 246L389 255L380 255L370 255L370 223ZM437 223L437 191L462 191L488 191L488 198L488 205L472 205L455 205L455 210L455 216L470 216L484 216L484 222L484 229L470 229L455 229L455 235L455 241L472 241L489 241L489 247L490 253L503 222L517 191L526 191L536 191L549 222C557 239 563 253 564 254C564 255 562 255 555 255L545 255L543 249L540 243L526 243L512 243L510 249L508 255L472 255L437 255L437 223ZM567 223L567 191L576 191L585 191L585 216L586 240L601 241L617 241L617 248L617 255L592 255L567 255L567 223ZM534 228C534 228 532 223 530 218L526 209L522 219L518 229L526 229C530 229 534 229 534 228ZM408 221C410 219 410 218 410 214C409 208 406 206 396 205L389 205L389 215L389 224L397 224C404 223 405 223 408 221Z" fill="#fff"/></svg>
+      <a class="mini" href="#prenota">Prenota la call</a>
+    </div>
+    <div class="head">
+      <h1>Entra nella rete<br><span>Cresci con la forza di AGL</span></h1>
+      <p class="sub">Scopri come la Formula Retail in Co-Brand porta nella tua agenzia nuovi incarichi di vendita, acquirenti già registrati e pubblicità gratuita sui principali portali. Affianchi il tuo marchio a quello di AGL, senza fee mensili e con un guadagno su ogni compravendita.</p>
+    </div>
+    <p class="vtitle"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#0BBD48"/><path d="M10 8v8l6.5-4z" fill="#fff"/></svg>Guarda il video per capire il progetto<span>Visione obbligatoria prima della call</span></p>
+    <div class="vid" id="vid">
+      <video id="video" disablepictureinpicture playsinline preload="metadata" poster="copertina-video.jpg" src="https://player.vimeo.com/progressive_redirect/playback/1246248325/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&amp;log_user=0&amp;signature=e84f52c5ef7a5999f7e146bc58b6e3554ebf95e27516f2ae87d75d6904256f01"></video>
+      <button class="cover" id="cover" style="background-image:url('copertina-video.jpg')" aria-label="Riproduci il video di presentazione">
+        <span class="play"><svg width="38" height="38" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="#fff"/></svg></span>
+        <span class="vlab">Video di presentazione · 30 minuti</span>
+      </button>
+      <div class="vbar">
+        <a class="vcta" id="vcta" href="#prenota">Prenota la call<svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="ctl" id="ctl">
+        <button class="cb" id="cplay" type="button" aria-label="Riproduci"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path id="iplay" d="M8 5.5v13l11-6.5z" fill="#fff"/></svg></button>
+        <span class="ct" id="ctime">0:00 / 0:00</span>
+        <input class="cseek" id="cseek" type="range" min="0" max="1000" value="0" step="1" aria-label="Avanzamento del video">
+        <button class="cb" id="cmute" type="button" aria-label="Disattiva audio"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4Z" fill="#fff"/><path id="iwave" d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12" stroke="#fff" stroke-width="2" stroke-linecap="round"/></svg></button>
+        <button class="cb" id="vfs" type="button" aria-label="Guarda a schermo intero"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path id="ifs" d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+      </div>
+    </div>
+    <div class="after">
+      <a class="btn" href="#prenota">Prenota la tua call gratuita<svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 5v14M6 13l6 6 6-6" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <span class="note"><svg width="20" height="20" viewBox="-1 -1 26 26" aria-hidden="true"><path d="M12.00 2.40Q15.24 -0.10 16.80 3.69Q20.86 3.14 20.31 7.20Q24.10 8.76 21.60 12.00Q24.10 15.24 20.31 16.80Q20.86 20.86 16.80 20.31Q15.24 24.10 12.00 21.60Q8.76 24.10 7.20 20.31Q3.14 20.86 3.69 16.80Q-0.10 15.24 2.40 12.00Q-0.10 8.76 3.69 7.20Q3.14 3.14 7.20 3.69Q8.76 -0.10 12.00 2.40Z" fill="#5AA2FF"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Riservato ad agenti immobiliari con patentino</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="stats"><div class="wrap grid4">
+    <div class="stat"><small>CIRCA</small><b>140</b><span>punti vendita AGL in tutta Italia</span></div>
+    <div class="stat"><small>OLTRE</small><b>100.000</b><span>clienti registrati che cercano casa</span></div>
+    <div class="stat"><small>UN SOLO NETWORK</small><b>8</b><span>mercati immobiliari, più i mutui</span></div>
+    <div class="stat"><small>ZERO</small><b>0 €</b><span>di fee mensile e nessun costo fisso</span></div>
+  </div></div>
+
+  <section class="why"><div class="wrap">
+    <p class="eyebrow">Perché AGL Real Estate</p>
+    <h2>Tu ti occupi dei clienti.<br><span>Al resto pensa AGL.</span></h2>
+    <p class="lead">Nel video trovi il progetto completo. In sintesi, ecco cosa ricevi entrando nella rete.</p>
+    <div class="grid3">
+      <article class="feat"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z M9 22V12h6v10" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Incarichi e acquirenti</h3><p>Immobili da vendere forniti da AGL e potenziali acquirenti dal nostro database clienti.</p></article>
+      <article class="feat"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m3 11 18-5v12L3 14v-3z M11.6 16.8a3 3 0 1 1-5.8-1.6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h3>Pubblicità gratis sui portali</h3><p>I tuoi annunci su Immobiliare.it, idealista e Casa.it, pagati dalla casa madre.</p></article>
+      <article class="feat"><div class="ic"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.13-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.13a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.13 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.13a.5.5 0 0 1-.96 0z" stroke="#fff" stroke-width="2" stroke-linejoin="round"/></svg></div><h3>Strumenti professionali</h3><p>CRM, software immobiliare e intelligenza artificiale per lavorare meglio e più velocemente.</p></article>
+    </div>
+  </div></section>
+
+  <section class="book" id="prenota"><div class="wrap bookbox">
+    <div>
+      <p class="eyebrow">Ultimo passo</p>
+      <h2>Prenota la tua <span>call gratuita</span></h2>
+      <p class="lead">Scegli il giorno e l’orario che preferisci. Un consulente AGL Real Estate ti chiamerà per rispondere alle tue domande e valutare insieme l’affiliazione della tua agenzia.</p>
+      <ol class="steps">
+        <li><b>1</b>Scegli data e ora nel calendario</li>
+        <li><b>2</b>Ricevi la conferma via email</li>
+        <li><b>3</b>Valutiamo insieme la tua affiliazione</li>
+      </ol>
+      <div class="lic"><svg width="28" height="28" viewBox="-1 -1 26 26" aria-hidden="true"><path d="M12.00 2.40Q15.24 -0.10 16.80 3.69Q20.86 3.14 20.31 7.20Q24.10 8.76 21.60 12.00Q24.10 15.24 20.31 16.80Q20.86 20.86 16.80 20.31Q15.24 24.10 12.00 21.60Q8.76 24.10 7.20 20.31Q3.14 20.86 3.69 16.80Q-0.10 15.24 2.40 12.00Q-0.10 8.76 3.69 7.20Q3.14 3.14 7.20 3.69Q8.76 -0.10 12.00 2.40Z" fill="#0A6BF0"/><path d="M8.5 12.2l2.4 2.4 4.6-4.8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Riservato ad agenti immobiliari con patentino</div>
+    </div>
+    <div class="cal">
+      <div class="calhead"><span class="dot"></span>Calendario appuntamenti AGL Real Estate<a class="calnew" href="https://calendly.com/massimo-imparato/agl-real-estate" target="_blank" rel="noopener">Apri in una nuova scheda<svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div>
+      <div class="calbody" id="calbody"></div>
+    </div>
+  </div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>AGL Aste Immobiliari – P.IVA 03967440987 – Via Malta 7/c, 25124 Brescia · © 2026</span>
+  <nav><a href="https://www.aglasteimmobiliari.it/informativa-cookies/" target="_blank" rel="noopener">Informativa cookies</a><a href="https://www.aglasteimmobiliari.it/privacy-policy/" target="_blank" rel="noopener">Informativa privacy</a></nav>
+</div></footer>
+
+<script>
+// Inserire qui il link Calendly di AGL Real Estate (es. https://calendly.com/aglrealestate/call)
+const CALENDLY_URL = "https://calendly.com/massimo-imparato/agl-real-estate";
+const cal = document.getElementById("calbody");
+const inPreview = /claude\.ai|claudeusercontent|anthropic/.test(location.hostname) || location.protocol === "file:" || window.self !== window.top;
+if (CALENDLY_URL && !inPreview) {
+  const f = document.createElement("iframe");
+  f.title = "Prenota la tua call";
+  f.src = CALENDLY_URL + (CALENDLY_URL.includes("?") ? "&" : "?") + "hide_gdpr_banner=1&primary_color=0a6bf0";
+  cal.appendChild(f);
+} else {
+  cal.innerHTML = `<div class="calph"><div>
+    <svg width="56" height="56" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="3" stroke="#0A6BF0" stroke-width="1.8"/><path d="M8 2v4M16 2v4M3 10h18" stroke="#0A6BF0" stroke-width="1.8" stroke-linecap="round"/><path d="M8.5 15.5l2.3 2.3 4.7-4.8" stroke="#0BBD48" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h3>Scegli quando parlarne</h3>
+    <p>Il calendario si apre in una nuova scheda. Bastano pochi secondi per fissare la tua call con il team AGL Real Estate.</p>
+    <a class="btn" href="${CALENDLY_URL}" target="_blank" rel="noopener" style="font-size:14px;padding:16px 24px">Scegli giorno e orario</a>
+  </div></div>`;
+}
+// Video: copertina con pulsante play
+const v = document.getElementById("video"), c = document.getElementById("cover");
+c.addEventListener("click", () => { c.remove(); document.getElementById("vid").classList.add("started"); v.play().catch(()=>{}); });
+const box = document.getElementById("vid");
+const isFs = () => document.fullscreenElement || document.webkitFullscreenElement;
+const cplay = document.getElementById("cplay"), iplay = document.getElementById("iplay"), ctime = document.getElementById("ctime"), cseek = document.getElementById("cseek"), cmute = document.getElementById("cmute"), iwave = document.getElementById("iwave"), ifs = document.getElementById("ifs");
+const fmt = s => { s = Math.max(0, Math.floor(s||0)); const m = Math.floor(s/60), r = s%60; return m + ":" + String(r).padStart(2,"0"); };
+const toggle = () => { if (c.isConnected) c.remove(); v.paused ? v.play().catch(()=>{}) : v.pause(); };
+cplay.addEventListener("click", toggle);
+v.addEventListener("click", toggle);
+v.addEventListener("play", () => { box.classList.add("started"); iplay.setAttribute("d","M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"); cplay.setAttribute("aria-label","Metti in pausa"); wake(); });
+v.addEventListener("pause", () => { iplay.setAttribute("d","M8 5.5v13l11-6.5z"); cplay.setAttribute("aria-label","Riproduci"); box.classList.remove("idle"); });
+const upd = () => { const p = v.duration ? v.currentTime / v.duration : 0; cseek.value = Math.round(p*1000); cseek.style.setProperty("--p", (p*100)+"%"); ctime.textContent = fmt(v.currentTime) + " / " + fmt(v.duration); };
+v.addEventListener("timeupdate", upd); v.addEventListener("loadedmetadata", upd);
+cseek.addEventListener("input", () => { if (v.duration) { v.currentTime = cseek.value/1000 * v.duration; upd(); } });
+cmute.addEventListener("click", () => { v.muted = !v.muted; iwave.style.display = v.muted ? "none" : ""; cmute.setAttribute("aria-label", v.muted ? "Attiva audio" : "Disattiva audio"); });
+let idleT; const wake = () => { box.classList.remove("idle"); clearTimeout(idleT); if (!v.paused) idleT = setTimeout(() => box.classList.add("idle"), 2600); };
+["mousemove","touchstart","keydown"].forEach(ev => box.addEventListener(ev, wake, {passive:true}));
+const fsChange = () => ifs.setAttribute("d", isFs() ? "M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5" : "M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5");
+document.addEventListener("fullscreenchange", fsChange); document.addEventListener("webkitfullscreenchange", fsChange);
+document.getElementById("vfs").addEventListener("click", () => {
+  if (isFs()) { (document.exitFullscreen || document.webkitExitFullscreen).call(document); return; }
+  if (box.requestFullscreen) box.requestFullscreen();
+  else if (box.webkitRequestFullscreen) box.webkitRequestFullscreen();
+  else if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+});
+document.getElementById("vcta").addEventListener("click", e => {
+  if (!isFs()) return;
+  e.preventDefault();
+  (document.exitFullscreen || document.webkitExitFullscreen).call(document);
+  setTimeout(() => document.getElementById("prenota").scrollIntoView({behavior:"smooth"}), 250);
+});
+</script>
+</body>
+</html>
