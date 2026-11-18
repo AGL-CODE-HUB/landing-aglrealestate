@@ -41,7 +41,9 @@ a{color:inherit}
 h1{margin:22px 0 0;font-weight:900;font-size:clamp(34px,6vw,68px);line-height:1;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
 h1 span{color:var(--lb)}
 .sub{font-size:clamp(16px,2vw,19px);line-height:1.6;color:#D6E4F7;margin:22px auto 0;max-width:680px;font-weight:500}
-.vid{position:relative;margin:44px auto 0;max-width:960px;border-radius:24px;overflow:hidden;background:#000;box-shadow:0 40px 90px -30px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12);aspect-ratio:16/9}
+.vtitle{position:relative;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 12px;margin:40px auto 0;font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-align:center}
+.vtitle span{font-size:11px;letter-spacing:.1em;padding:6px 12px;border-radius:999px;background:rgba(51,209,107,.15);border:1.5px solid rgba(51,209,107,.6);color:#9FF0BC}
+.vid{position:relative;margin:18px auto 0;max-width:960px;border-radius:24px;overflow:hidden;background:#000;box-shadow:0 40px 90px -30px rgba(0,0,0,.65),0 0 0 1px rgba(255,255,255,.12);aspect-ratio:16/9}
 .vid video{display:block;width:100%;height:100%;object-fit:cover;background:#000}
 .vid .cover{position:absolute;inset:0;border:0;padding:0;cursor:pointer;background:center/cover no-repeat;display:grid;place-items:center}
 .vid .cover::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(7,28,68,.05),rgba(7,28,68,.45))}
@@ -147,9 +149,9 @@ footer a{text-decoration:none}footer a:hover{color:var(--navy);text-decoration:u
     </div>
     <div class="head">
       <h1>Entra nella rete<br><span>Cresci con la forza di AGL</span></h1>
-      <p class="kick"><svg width="26" height="26" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#0BBD48"/><path d="M10 8v8l6.5-4z" fill="#fff"/></svg>Guarda il video</p>
       <p class="sub">Scopri come la Formula Retail in Co-Brand porta nella tua agenzia nuovi incarichi di vendita, acquirenti già registrati e pubblicità gratuita sui principali portali. Affianchi il tuo marchio a quello di AGL, senza fee mensili e con un guadagno su ogni compravendita.</p>
     </div>
+    <p class="vtitle"><svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="12" fill="#0BBD48"/><path d="M10 8v8l6.5-4z" fill="#fff"/></svg>Guarda il video per capire il progetto<span>Visione obbligatoria prima della call</span></p>
     <div class="vid" id="vid">
       <video id="video" disablepictureinpicture playsinline preload="metadata" poster="copertina-video.jpg" src="https://player.vimeo.com/progressive_redirect/playback/1246248325/rendition/1080p/file.mp4%20%281080p%29.mp4?loc=external&amp;log_user=0&amp;signature=e84f52c5ef7a5999f7e146bc58b6e3554ebf95e27516f2ae87d75d6904256f01"></video>
       <button class="cover" id="cover" style="background-image:url('copertina-video.jpg')" aria-label="Riproduci il video di presentazione">
